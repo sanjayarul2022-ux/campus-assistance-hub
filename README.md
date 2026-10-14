@@ -83,16 +83,6 @@ Creates an optimized production bundle inside the `dist/` directory.
 
 ## 🎓 Higher-Order Thinking Skills (HOTS) / Design Analysis
 
-### Prompt:
-> *"Suppose the Campus Assistance Hub is expanded from 5 services to 50 services. Analyze how your component design would affect code reusability, duplication, and maintainability. Identify one important component-design decision made in your application and justify why it would remain useful as the application grows."*
-
-### 1. Analysis of Scalability (Code Reusability, Duplication & Maintainability)
-- **Zero Layout Duplication (O(1) Component Footprint):**  
-  In a naive web development approach, scaling to 50 services would require 50 individual HTML pages or 50 hardcoded template blocks. In our React architecture, exactly **one** reusable `<ServiceCard />` and **one** `<ServiceDetailModal />` component exist. All 50 items are rendered dynamically via standard array mapping (`.map()`), ensuring zero markup duplication.
-- **Data-Driven Decoupling:**  
-  Expanding the hub to 50 services only requires appending data objects to `campusServices.js` (or consuming a remote REST API). The presentation components and styling remain 100% unchanged.
-- **Single-Point Maintainability:**  
-  Any design change, visual refactoring, or accessibility enhancement made inside `ServiceCard.jsx` instantly propagates across all 50 service cards simultaneously, eliminating repetitive edits and regression risks.
 
 ### 2. Key Component-Design Decision & Justification
 - **The Decision: Centralized Single-Source State Management at the Top-Level Container.**  
@@ -104,18 +94,3 @@ Creates an optimized production bundle inside the `dist/` directory.
 
 ---
 
-## 📄 Submission Report Generation
-A comprehensive submission document formatted to the assignment rubric is included in `submission_report.html`.
-- **To export as PDF**:
-  1. Open `submission_report.html` in Google Chrome or Microsoft Edge.
-  2. Press `Ctrl + P`.
-  3. Destination: **Save as PDF**, enable **Background graphics**, and save.
-
----
-
-## 👨‍💻 Student Submission Details
-- **Course:** BCSE203E – Web Programming
-- **Assignment:** Assignment 7 (10 Marks)
-- **Faculty:** Prof. Nihaal Ahmed.K
-- **Slot:** L31 + L32 + L51 + L52
-- **GitHub Repository:** `https://github.com/[your-username]/vit-campus-assistance-hub`
